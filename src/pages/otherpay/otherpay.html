@@ -1,0 +1,78 @@
+<!--
+  Generated template for the OtherpayPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+  
+  <ion-navbar hideBackButton color="nmbgrey2">
+    <ion-buttons left>
+		<button ion-button navPop icon-only>
+			<ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+			<img src="assets/logotran3.png" style="height:30px;width:auto;border-radius:50%;"/>
+		</button>
+	</ion-buttons>
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="back-view2" style="display:flex;align-items:center">
+<div>
+    <ion-list >
+	    <ion-item style="font-size:12px" *ngIf="studdetails!=''">
+	        <div [innerHTML]="studdetails"></div>
+        </ion-item>
+		<ion-item style="font-size:12px">
+		    <ion-icon name="briefcase" item-left color="nmbblue" ></ion-icon>
+			<ion-label color="nmbblue">Pay from</ion-label>
+			<ion-select color="nmbblue" interface="action-sheet" [(ngModel)]="objectblock.account" style="max-width:auto;min-width:60%;text-align:right">
+				<ion-option *ngFor="let account of accounts">{{account}}</ion-option>
+			</ion-select>
+		</ion-item>
+		
+		<ion-item style="font-size:12px" *ngIf="title=='School Fee'">
+		    <ion-icon name="home" item-left color="nmbblue" ></ion-icon>
+			<ion-label color="nmbblue">Select Institution</ion-label>
+			<ion-select color="nmbblue" interface="action-sheet" [(ngModel)]="objectblock.institution" style="max-width:auto;min-width:60%;text-align:right">
+			    <ion-option *ngFor="let institution of institutions" >{{institution}}</ion-option>
+				
+			</ion-select>
+		</ion-item>
+		<ion-item style="font-size:12px" *ngIf="selectBillType">
+		    <ion-icon name="home" item-left color="nmbblue" ></ion-icon>
+			<ion-label color="nmbblue">Select Institution</ion-label>
+			<ion-select color="nmbblue" interface="action-sheet" [(ngModel)]="objectblock.billType" style="max-width:auto;min-width:60%;text-align:right">
+			    <ion-option *ngFor="let billType of billTypes" [value]="billType">{{billType.CodeName}}</ion-option>
+				
+			</ion-select>
+		</ion-item>
+		<ion-item style="font-size:12px">
+		    <ion-icon name="briefcase" item-left color="nmborange" ></ion-icon>
+			<ion-label>Pay to Account</ion-label>
+			<ion-input type="text" [(ngModel)]="objectblock.accountto"></ion-input>
+		</ion-item>
+		<ion-item style="font-size:12px"  *ngIf="title!='School Fee' || amountForm">
+		    <ion-icon name="cash" item-left color="nmbblue" ></ion-icon>
+			<ion-label>Amount</ion-label>
+			<ion-input type="tel" [(ngModel)]="objectblock.amount"></ion-input>
+		</ion-item>
+
+		<p></p>
+    </ion-list>
+</div>
+</ion-content>
+<ion-footer no-border style="margin:0px;padding:0px;min-height:50px">
+   <ion-navbar style="margin:0px;padding:0px;min-height:50px"> 
+       <button ion-button full color="nmbblue" (click)="submit(objectblock)"  *ngIf="title!='School Fee'" style="margin:0px;font-size:13px;height:50px" text-capitalize icon-left>
+		Submit<ion-spinner name="dots" color="light"></ion-spinner></button>
+		<button ion-button full color="nmbblue" (click)="submitFee(objectblock)" *ngIf="title=='School Fee' && !amountForm" style="margin:0px;font-size:13px;height:50px" text-capitalize icon-left>
+		Submit<ion-spinner name="dots" color="light"></ion-spinner></button>
+		<button ion-button full color="nmbblue" (click)="submitAmount(objectblock)" *ngIf="amountForm" style="margin:0px;font-size:13px;height:50px" text-capitalize icon-left>
+		Submit<ion-spinner name="dots" color="light"></ion-spinner></button>
+   </ion-navbar>
+
+</ion-footer>
+

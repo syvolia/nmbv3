@@ -1,0 +1,51 @@
+
+
+<ion-header no-border>
+
+  <ion-navbar hideBackButton color="nmbgrey2">
+    <ion-buttons left>
+		<button ion-button navPop icon-only>
+			<ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+	
+		</button>
+	</ion-buttons>
+    <ion-title>Loan Repayment</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="back-view2" style="display:flex;align-items:center">
+<div>
+    <ion-list>
+
+		<ion-item style="font-size:12px">
+		    <ion-icon name="briefcase" item-left color="nmbgrey2" ></ion-icon>
+			<ion-label color="nmbblue">Pay From</ion-label>
+			 	<ion-select color="nmbblue" interface="action-sheet" [(ngModel)]="objectblock.account" style="max-width:auto;min-width:60%;text-align:right">
+			
+              <ion-option value="FLEXI">2557041110586</ion-option>
+              <ion-option value="3M FLEXI">0112233444</ion-option>
+              <ion-option value="MCU1">01114446667</ion-option>
+              <ion-option value="MCU2">01114446667</ion-option>
+              
+            </ion-select>
+		</ion-item>
+
+    <ion-item style="font-size:12px">
+		    <ion-icon name="cash" item-left color="nmbblue" ></ion-icon>
+			<ion-label>Amount</ion-label>
+			<ion-input type="tel" [(ngModel)]="objectblock.amount"></ion-input>
+		</ion-item>
+		<p></p>
+    </ion-list>
+</div>
+</ion-content>
+<ion-footer no-border style="margin:0px;padding:0px;min-height:50px">
+   <ion-navbar style="margin:0px;padding:0px;min-height:50px">
+       <button ion-button full color="nmbblue" (click)="openModal()"  *ngIf="!amountForm" style="margin-left:auto;margin-right:auto;margin-bottom:5px;font-size:13px;height:50px;width:97%" text-capitalize icon-left>
+		Pay</button>
+	   
+   </ion-navbar>
+</ion-footer>
+

@@ -1,0 +1,119 @@
+<!--
+  Generated template for the Main page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+  <ion-navbar color="nmbblue">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+	  <img  src="assets/logo3.png" style="height:30px;width:auto;border-radius:50%;"/>
+    </button>
+	<ion-title>Main Services</ion-title>
+   
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="back-view">
+ <div  class="container2" 
+	style="height:100%;width:100%;background:rgba( 0,0,255,0.2);background:url('assets/back1.jpg')center;position:absolute;background-size:cover;z-index:999999999;left:0px;top:0px;width:100%">
+		
+    <div  style="background:#0257A7;">
+		<ion-row>
+			<ion-col>
+				<div style="text-align:center;padding:0px 10px 10px 10px">
+				    <div style="color:#ffffff;font-size:14px;text-align:center;">Welcome Victor</div>
+					<br>
+					<img src="assets/logo2.jpg" style="height:60px;width:60px;border-radius:50%;text-align:center;border:solid 3px #ffffff"/>
+					<br>
+					<br>
+					
+				</div>
+			</ion-col>
+		</ion-row>
+	</div>
+<ion-row class="advert-row" padding>
+		<ion-col class="text-center" padding (click)="openPage('EnquiriesPage')">
+		    
+			    <div  class="myspinner"  style="background-color:#ffffff;border-color:#0257A7;border-width:2px;border-radius:50%;height:80px;width:80px;border-style:solid; display:flex;">
+				     <img src="assets/economy.png" style="height:30px;width:40px;margin-left: auto;
+    margin-right: auto;margin-top: 20px;"/>
+                </div>				
+		
+			<p>
+		    Account Enquiries
+			</p>
+		</ion-col >
+			<ion-col class="text-center" padding (click)="openPage('LendingPage')">
+		  
+			    <div class="myspinner" style="background-color:#ffffff;border-color:#0257A7;border-width:2px;border-radius:50%;height:80px;width:80px;border-style:solid; display:flex;">
+				     <img src="assets/loan.png" style="height:30px;width:40px;margin-left: auto;
+    margin-right: auto;margin-top: 20px;"/>
+                </div>				
+		
+			<p>
+		    Loans
+			</p>
+		</ion-col>  
+		 
+    </ion-row>
+	<ion-row class="advert-row" padding>
+		
+		
+		<ion-col class="text-center" padding (click)="openPage('MoneyTransferPage')">
+		    
+			    <div class="myspinner" style="background-color:#ffffff;border-color:#0257A7;border-width:2px;border-radius:50%;height:80px;width:80px;border-style:solid; display:flex;">
+				     <img src="assets/transfer.png" style="height:30px;width:40px;margin-left: auto;
+    margin-right: auto;margin-top: 20px;"/>
+                </div>				
+		
+			<p>
+		    Funds Transfer
+			</p>
+		</ion-col>
+		<ion-col class="text-center" padding (click)="openPage('PayBillsPage')">
+		
+			    <div  class="myspinner" style="background-color:#ffffff;border-color:#0257A7;border-width:2px;border-radius:50%;height:80px;width:80px;border-style:solid; display:flex;">
+				     <img src="assets/paybill.png" style="height:30px;width:40px;margin-left: auto;
+    margin-right: auto;margin-top: 20px;"/>
+                </div>				
+		
+			<p>
+		    Pay Bills
+			</p>
+		</ion-col > 
+	
+	  
+    </ion-row>
+	<ion-row class="advert-row" padding>
+		
+		<ion-col class="text-center" padding (click)="openPage('OtherServicesPage')">
+		 
+			    <div  class="myspinner" style="background-color:#ffffff;border-color:#0257A7;border-width:2px;border-radius:50%;height:80px;width:80px;border-style:solid; display:flex;">
+				     <img src="assets/puzzle.png" style="height:30px;width:40px;margin-left: auto;
+    margin-right: auto;margin-top: 20px;"/>
+                </div>				
+			
+			<p>
+		    Other Services
+			</p>
+		    
+		</ion-col>
+		
+	
+    </ion-row>
+	
+ </div>
+ <ion-fab right edge>
+		<button ion-fab mini color="nmborange"><ion-icon name="arrow-dropdown"></ion-icon></button>
+		<ion-fab-list side="bottom">
+		  
+		  <button ion-fab color="facebook" (click)="openPage('LocationtabsPage')"><ion-icon name="locate"></ion-icon></button>
+		  <button ion-fab color="youtube" (click)="openPage('ContactsPage')"><ion-icon name="call"></ion-icon></button>
+		</ion-fab-list>
+ </ion-fab>
+
+
+</ion-content>

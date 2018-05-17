@@ -1,0 +1,63 @@
+<ion-header no-border>
+  
+  <ion-navbar hideBackButton color="nmbgrey2">
+    <ion-buttons left>
+		<button ion-button navPop icon-only>
+			<ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+			<img src="assets/logotran3.png" style="height:30px;width:auto;border-radius:50%;"/>
+		</button>
+	</ion-buttons>
+    <ion-title>Register</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="back-view2" style="display:flex;align-items:center">
+<div>
+    <ion-list>
+		<ion-item style="font-size:12px">
+		    <ion-icon name="call" item-left color="nmbblue"></ion-icon>
+			<ion-label>Mobile Number</ion-label>
+			<ion-input type="tel" [(ngModel)]="objectblock.mobile"></ion-input>
+		</ion-item>
+		<ion-item style="font-size:12px">
+		    <ion-icon name="person" item-left color="nmbblue"></ion-icon>
+			<ion-label>First Name</ion-label>
+			<ion-input type="text" [(ngModel)]="objectblock.first"></ion-input>
+		</ion-item>
+		<ion-item style="font-size:12px">
+		    <ion-icon name="person" item-left color="nmborange"></ion-icon>
+			<ion-label>Second Name</ion-label>
+			<ion-input type="text" [(ngModel)]="objectblock.second"></ion-input>
+		</ion-item>
+		<ion-item style="font-size:12px">
+		    <ion-icon name="person" item-left color="nmbgey2"></ion-icon>
+			<ion-label>Last Name</ion-label>
+			<ion-input type="text" [(ngModel)]="objectblock.last"></ion-input>
+		</ion-item>
+		<ion-item style="font-size:12px">
+		    <ion-icon name="list-box" item-left color="nmbblue"></ion-icon>
+			<ion-label>ID Number</ion-label>
+			<ion-input type="tel" [(ngModel)]="objectblock.id"></ion-input>
+		</ion-item>
+		<ion-item style="font-size:12px">
+		  <ion-icon name="calendar" item-left color="nmbblue"></ion-icon>
+		  <ion-label>Date of Birth</ion-label>
+		  <ion-datetime displayFormat="YYYY-MM-DD" [(ngModel)]="objectblock.date" ></ion-datetime>
+		</ion-item>
+		<ion-item style="font-size:12px">
+		    <ion-icon name="briefcase" item-left color="nmbblue"></ion-icon>
+			<ion-label>Bank Account(if you have one)</ion-label>
+			<ion-input type="tel" [(ngModel)]="objectblock.account"></ion-input>
+		</ion-item>
+		<p></p>
+    </ion-list>
+</div>
+</ion-content>
+<ion-footer no-border style="margin:0px;padding:0px;min-height:50px">
+   <ion-navbar style="margin:0px;padding:0px;min-height:50px"> 
+       <button ion-button full color="nmbblue" (click)="submit(objectblock)" style="margin:0px;font-size:13px;height:50px" text-capitalize icon-left>
+		Submit<ion-spinner name="dots" color="light"></ion-spinner></button>
+   </ion-navbar>
+</ion-footer>

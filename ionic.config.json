@@ -1,0 +1,8 @@
+{
+  "name": "nmbv3",
+  "app_id": "a598572c",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

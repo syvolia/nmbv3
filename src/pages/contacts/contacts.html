@@ -1,0 +1,70 @@
+<!--
+  Generated template for the Contact page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+  
+  <ion-navbar hideBackButton color="nmbgrey2" *ngIf="!fromMain">
+    <ion-buttons left>
+		<button ion-button navPop icon-only>
+			<ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+			
+		</button>
+	</ion-buttons>
+    <ion-title>Contact Us</ion-title>
+  </ion-navbar>
+  <ion-navbar color="nmbgrey2" *ngIf="fromMain">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+	  <img  src="assets/logotran3.png" style="height:30px;width:auto;border-radius:50%;"/>
+    </button>
+	
+    <ion-title>Contact Us</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="back-view2">
+	<div style="font-size:12px;text-align:center" padding><span style="font-weight:bold">
+		Sponsor Plc <br>
+		Head Office<br>
+		Kimathi Road<br>
+		P.O Box 9213<br>
+		Nairobi, Kenya</span>
+	</div >
+	<div style="font-size:12px;text-align:center" padding>
+	<ion-list no-lines class="center">
+	    <div>
+	    <ion-item style="font-size:12px;width:auto" >
+		    <ion-icon name="call" item-left color="nmbblue"></ion-icon>
+			<a style="text-decoration:none"href="tel:+255222322000">Tel: +254222322000</a>
+		</ion-item>
+		<ion-item style="font-size:12px;width:auto;">
+		    <ion-icon name="print" item-left color="nmbblue"></ion-icon>
+			Fax: +254222112148
+		</ion-item>
+		
+		</div>
+	</ion-list>
+    </div>
+    <div style="font-size:12px;text-align:center" padding>
+		<span style="font-weight:bold">You can also use our toll free number accessible on – <a style="text-decoration:none"href="tel:0800 002 002">0800 002 002</a>.</span><br>
+		 
+		<p style="font-size:12px">All branches open from <span style="font-weight:bold">0830hrs to 1630hrs Monday to Friday</span><br>
+		All branches open from <span style="font-weight:bold">0830hrs to 1230hrs on Saturday</span><br>
+		All branches open from <span style="font-weight:bold">10am to 1400hrs on Sunday</span> except of Sponsor Mlimani City and Rock City which open up to <span style="font-weight:bold">1600hrs</span></p>
+		 
+		<p style="font-size:12px"><span style="font-weight:bold">Contact Centre Working hours:</span><br>
+		 
+		Monday – Friday 7:00AM to 10:00PM<br>
+		Saturday – Sunday  7:00AM to 08:00PM<br>
+		Public holidays – 7:00AM to 8:00PM</p>
+		
+		<p style="font-size:12px"><span style="font-weight:bold">Head Office Working Hours</span><br>
+ 
+        Monday - Friday 08:00AM to 05:00PM</p>
+    </div>
+</ion-content>

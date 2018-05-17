@@ -1,0 +1,87 @@
+<!--
+  Generated template for the Login page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content scrollY="false">
+<ion-slides loop="true" autoplay=15000 speed=1000 effect="fade" style="height:100%:">
+
+	  <ion-slide style="background:url('assets/back1.jpg')center;background-size:cover" >
+	  </ion-slide>
+
+	  <ion-slide style="background:url('assets/back3.jpg')center;background-size:cover" >
+	  </ion-slide>
+
+	</ion-slides>
+    <div class="container2" style="background:rgba( 0,0,255,0.2);z-index:999999999;position:absolute;left:0px;top:0px;width:100%">
+		<div class="row row2" >
+
+
+			<div style="text-align:center;width:100%" ng-show="phone_uuid_not_present()">
+				<ion-row style="margin-bottom:60px">
+					<ion-col center>
+						<img src="assets/logo3.png" class="raisedlay" style="height:75px;border-radius:50%;" />
+					</ion-col>
+
+				</ion-row>
+				<div style="padding:0px 20px 0px 20px;">
+					<div *ngIf="!isPasswordForm">
+						<ion-row style="position:relative;height:45px;font-size:12px;background:#33CCFF;" >
+						   <div style="position:absolute;top:-25px;left:-2px;color:#ffffff;font-size:11px;padding:5px;white-space: nowrap;overflow: hidden;">Mobile Number</div>
+						   <ion-col col-3 style="padding:0px;background:#0257A7" class="center">
+						       <ion-icon name="contact" style="font-size:25px" color="mywhite"></ion-icon>
+						   </ion-col>
+						   <ion-col col-9 style="padding:0px" class="center">
+						       <input class="customplaceholder2" style="float:left;letter-spacing:5px;padding-left:10px;background:rgba(0,0,0,0);color:#ffffff;height:100%;border:none;width:100%" type="tel" maxlength="10" placeholder="(07)" [(ngModel)]="objectblock.user" />
+						   </ion-col>
+						</ion-row>
+						<div style="padding:3px;width:100%;color:#ffffff;font-size:11px" *ngIf="error==1">Enter a valid Mobile Number</div>
+					
+	                </div>
+	               
+						<ion-row style="position:relative;height:45px;font-size:12px;background:#33CCFF;margin-top:50px" >
+						   <div style="position:absolute;top:-25px;left:-2px;color:#ffffff;font-size:11px;padding:5px;white-space: nowrap;overflow: hidden;">Pin Number</div>
+						   <ion-col col-3 style="padding:0px;background:#0257A7" class="center">
+						       <ion-icon name="key" style="font-size:25px" color="mywhite"></ion-icon>
+						   </ion-col>
+						   <ion-col col-9 style="padding:0px" class="center">
+						       <input class="customplaceholder2" style="float:left;letter-spacing:5px;padding-left:10px;background:rgba(0,0,0,0);color:#ffffff;height:100%;border:none;width:100%" type="password" maxlength="4"  [(ngModel)]="objectblock.password" />
+						   </ion-col>
+						</ion-row>
+	                    <div style="padding:3px;width:100%;color:#ffffff;font-size:11px" *ngIf="error==2">Enter a valid password</div>
+						<br>
+
+						<button ion-button block color="cooplightgreen" mode="ios"  (click)="verifyPin()" no-border  style="border-radius:0px;font-size:14px;height:45px;width:auto">Log in<ion-spinner name="dots" color="light"></ion-spinner></button>
+					</div>
+				</div>
+			</div>
+
+
+	</div>
+	<ion-row  style="z-index:999999999;position:absolute;left:0px;bottom:10px;width:100%">
+
+		<ion-col style="border-right:1px solid #ffffff;" (click)="openPage('ContactsPage')">
+			<div style="text-align:center;color:#ffffff;font-size:12px;">
+				<img src="assets/globe.png" style="height:30px;margin-left:auto;margin-right:auto"/>
+				<br>
+				<div style="width:100%;text-align:center">Contact Us</div>
+			</div>
+		</ion-col>
+		<ion-col style="border-right:1px solid #ffffff" (click)="openPage('LocationtabsPage')">
+			<div style="text-align:center;color:#ffffff;font-size:12px;">
+				<img src="assets/placeholder.png" style="height:30px;margin-left:auto;margin-right:auto"/>
+				<br>
+				<div style="width:100%;text-align:center">Locate</div>
+			</div>
+		</ion-col>
+		<ion-col (click)="verifyPins()">
+			<div style="text-align:center;color:#ffffff;font-size:12px;">
+				<img src="assets/clipboard.png" style="height:30px;margin-left:auto;margin-right:auto"/>
+				<br>
+				<div style="width:100%;text-align:center">Register</div>
+			</div>
+		</ion-col>
+	</ion-row>
+
+</ion-content>

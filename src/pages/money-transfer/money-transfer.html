@@ -1,0 +1,104 @@
+<!--
+  Generated template for the MoneyTransferPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+  
+  <ion-navbar hideBackButton color="nmbgrey2">
+    <ion-buttons left>
+		<button ion-button navPop icon-only>
+			<ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+			
+		</button>
+	</ion-buttons>
+    <ion-title>Funds  Transfer</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="back-view">
+	<div  style="height:100%;width:100%">
+	<div 
+	style="display:flex;align-items:center;height:100%;width:100%background:rgba( 0,0,255,0.2);background:url('assets/back1.jpg')center;background-size:cover;z-index:999999999;left:0px;top:0px;width:100%">
+		
+		   <ion-row padding>
+
+			<ion-col class="text-center" padding (click)="openPage('Bank Account')">
+		    
+			    <div  class="myspinner"  style="background-color:#ffffff;border-color:#0257A7;border-width:2px;border-radius:50%;height:80px;width:80px;border-style:solid; display:flex;">
+				     <img src="assets/logo3.png" style="height:40px;width:40px;margin-left: auto;
+    margin-right: auto;margin-top: 20px;border-radius:50px"/>
+                </div>				
+		
+			<p>
+		  Bank Account
+			</p>
+		</ion-col >
+			
+			<ion-col class="text-center" padding (click)="openPage('M-Pesa')">
+		    
+			    <div  class="myspinner"  style="background-color:#ffffff;border-color:#0257A7;border-width:2px;border-radius:50%;height:80px;width:80px;border-style:solid; display:flex;">
+				     <img src="assets/safaricomlogo.png" style="height:40px;width:40px;margin-left: auto;
+    margin-right: auto;margin-top: 20px;border-radius:50px"/>
+                </div>				
+		
+			<p>
+			M-Pesa
+			</p>
+		</ion-col >
+		   </ion-row>
+		   <ion-row padding>
+		
+				<ion-col class="text-center" padding (click)="openPage('Telkom')">
+		    
+			    <div  class="myspinner"  style="background-color:#ffffff;border-color:#0257A7;border-width:2px;border-radius:50%;height:80px;width:80px;border-style:solid; display:flex;">
+				     <img src="assets/telkom.jpg" style="height:40px;width:40px;margin-left: auto;
+    margin-right: auto;margin-top: 20px;border-radius:50px"/>
+                </div>				
+		
+			<p>
+		Telkom
+		
+			</p>
+		</ion-col >
+			<ion-col class="text-center" padding (click)="openPage('Airtel Money')">
+		    
+			    <div  class="myspinner"  style="background-color:#ffffff;border-color:#0257A7;border-width:2px;border-radius:50%;height:80px;width:80px;border-style:solid; display:flex;">
+				     <img src="assets/airtel.png" style="height:40px;width:40px;margin-left: auto;
+    margin-right: auto;margin-top: 20px;border-radius:50px"/>
+                </div>				
+		
+			<p>
+			Airtel 
+			</p>
+		</ion-col >
+		
+		   </ion-row>
+		   <ion-row padding>
+			  
+		
+			
+			
+		   </ion-row>
+		   <ion-row padding>
+			  
+		
+			<ion-col style="text-align:center;" padding >
+				
+			</ion-col>
+		   </ion-row>
+		</div>
+	</div>
+	
+	<ion-fab top right edge>
+		<button ion-fab mini color="nmborange"><ion-icon name="arrow-dropleft"></ion-icon></button>
+		<ion-fab-list side="left">
+		  
+		  <button ion-fab color="facebook" (click)="openPage('LocationtabsPage')"><ion-icon name="locate"></ion-icon></button>
+		  <button ion-fab color="youtube" (click)="openPage('ContactsPage')"><ion-icon name="call"></ion-icon></button>
+		</ion-fab-list>
+	</ion-fab>
+</ion-content>

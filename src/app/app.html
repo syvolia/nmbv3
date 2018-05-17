@@ -1,0 +1,40 @@
+<ion-menu [content]="content"  >
+ 
+ <ion-content style="background:#f4f4f4">
+    <div style="text-align:center;padding:10px;background:#0257A7">
+    <img src="assets/logotran3.png" style="max-height:150px" />
+  </div>
+    <ion-list no-lines>
+    <ion-item-divider color="nmbgrey2">Quick Links</ion-item-divider>
+      <button ion-item *ngFor="let p of pages" (click)="openPage(p)"color="light" style="font-size:12px" menuClose>
+       
+        <ion-icon name="{{p.icon}}" item-left color="nmbblue"></ion-icon>
+     
+        {{p.title}}
+      </button>
+    <ion-item-divider color="nmbgrey2">Social</ion-item-divider>
+    <button ion-item style="font-size:12px" color="light"  menuClose (click)="openBrowser('https://www.facebook.com/OfficialNMBTZ?ref=hl')">
+       
+        <ion-icon name="logo-facebook" item-left color="nmbblue"></ion-icon>
+     
+        Facebook
+      </button>
+    <button ion-item style="font-size:12px" color="light" menuClose (click)="openBrowser('https://twitter.com/NMBTanzania')">
+       
+        <ion-icon name="logo-twitter" item-left color="nmbblue"></ion-icon>
+     
+        Twitter
+      </button>
+    <button ion-item style="font-size:12px" color="light" menuClose (click)="openBrowser('https://www.youtube.com/channel/UCDgaecgXhrN8zjhJ63xcK-A')">
+       
+        <ion-icon name="logo-youtube" item-left color="nmbblue"></ion-icon>
+     
+        Youtube
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

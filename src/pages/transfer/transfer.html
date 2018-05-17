@@ -1,0 +1,96 @@
+<!--
+  Generated template for the TransferPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+  
+  <ion-navbar hideBackButton color="nmbgrey2">
+    <ion-buttons left>
+		<button ion-button navPop icon-only>
+			<ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+		
+		</button>
+	</ion-buttons>
+    <ion-title>Transfer to {{title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+<ion-content class="back-view2" style="display:flex;align-items:center">
+<div>
+    <ion-list >
+	    
+		<ion-item style="font-size:12px">
+		    <ion-icon name="briefcase" item-left color="nmbblue"></ion-icon>
+			<ion-label color="nmbblue">Transfer from</ion-label>
+		 	<ion-select color="nmbblue" interface="action-sheet" [(ngModel)]="objectblock.account" style="max-width:auto;min-width:60%;text-align:right">
+              <ion-option value="FLEXI">2557041110586</ion-option>
+              <ion-option value="3M FLEXI">0112233444</ion-option>
+              <ion-option value="MCU1">01114446667</ion-option>
+              <ion-option value="MCU2">01114446667</ion-option>
+              
+            </ion-select>
+		</ion-item>
+		<ion-item style="font-size:12px" *ngIf="title=='Bank Account'">
+			<ion-icon name="briefcase" item-left color="nmborange" ></ion-icon>
+			<ion-label>Transfer to {{text}}</ion-label>
+			<ion-input type="tel" [(ngModel)]="objectblock.accountto"></ion-input>
+		</ion-item>
+		<ion-list radio-group *ngIf="title!='Bank Account'" [(ngModel)]="objectblock.recepient" (ngModelChange)="checkRecepeint(objectblock.recepient)">
+
+			<ion-list-header style="font-size:12px">
+				Select Recepient
+			</ion-list-header>
+
+			<ion-item style="font-size:12px">
+			    <ion-icon name="person" item-left color="nmbblue" ></ion-icon>
+				<ion-label>My Number</ion-label>
+				<ion-radio value="my"></ion-radio>
+			</ion-item>
+
+			<ion-item style="font-size:12px">
+			    <ion-icon name="person" item-left color="nmborange" ></ion-icon>
+				<ion-label>Other Number</ion-label>
+				<ion-radio value="other"></ion-radio>
+			</ion-item>
+			
+		</ion-list>
+		<ion-item style="font-size:12px" *ngIf="title!='Bank Account'&&objectblock.recepient=='my'">
+		    <ion-icon name="call" item-left color="nmbblue" ></ion-icon>
+			<ion-label>Transfer to</ion-label>
+			<ion-input type="tel" [(ngModel)]="objectblock.accountto" maxlength="10"></ion-input>
+		</ion-item>
+		<ion-row style="padding:0px" *ngIf="title!='Bank Account'&&objectblock.recepient=='other'">
+		    <ion-col col-10>
+				<ion-item style="font-size:12px"  no-lines>
+				    <ion-icon name="call" item-left color="nmbblue" ></ion-icon>
+					<ion-label>Transfer to</ion-label>
+					<ion-input type="tel" [(ngModel)]="objectblock.accountto" maxlength="10"></ion-input>
+					
+				</ion-item>
+			</ion-col>
+			<ion-col col-2>
+			    <ion-item no-lines>
+			        <ion-icon name="contacts" item-right color="nmbblue" (click)="pickContact()"></ion-icon>
+			    </ion-item>
+			</ion-col>
+		</ion-row>
+		<ion-item style="font-size:12px">
+		    <ion-icon name="cash" item-left color="nmbblue" ></ion-icon>
+			<ion-label>Amount</ion-label>
+			<ion-input type="tel" [(ngModel)]="objectblock.amount"></ion-input>
+		</ion-item>
+		<p></p>
+    </ion-list>
+</div>
+</ion-content>
+<ion-footer no-border style="margin:0px;padding:0px;min-height:50px">
+   <ion-navbar style="margin:0px;padding:0px;min-height:50px"> 
+       <button ion-button full color="nmbblue" (click)="openModal()" style="margin:0px;font-size:13px;height:50px" text-capitalize icon-left>
+		Submit<ion-spinner name="dots" color="light"></ion-spinner></button>
+   </ion-navbar>
+</ion-footer>

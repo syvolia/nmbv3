@@ -1,0 +1,57 @@
+<!--
+  Generated template for the WithdrawCashPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+  
+  <ion-navbar hideBackButton color="nmbgrey2">
+    <ion-buttons left>
+		<button ion-button navPop icon-only>
+			<ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+			<img src="assets/logotran3.png" style="height:30px;width:auto;border-radius:50%;"/>
+		</button>
+	</ion-buttons>
+    <ion-title>Withdraw Cash</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="back-view">
+	<div  style="display:flex;align-items:center;height:100%;width:100%">
+		<div  style="color:#0257A7;font-size:12px;width:100%">
+		   <ion-row padding>
+			<ion-col style="text-align:center;" padding (click)="openPage('Atm')">
+				<div style="margin-left:auto;margin-right:auto;text-align:center">
+					<div  class="raisedlay" style="background:url('assets/nmbatm.jpg')center no-repeat;background-size:cover;margin-left:auto;margin-right:auto;border-radius:10px;height:100px;width:100px">
+						
+					</div>
+					<br>
+					ATM Cardless Cash Withdraw 
+				</div>
+			</ion-col>
+			<ion-col style="text-align:center;" padding (click)="openPage('Wakala')">
+				<div style="margin-left:auto;margin-right:auto;text-align:center">
+					<div   class="raisedlay" style="background:url('assets/wakala.jpg')center no-repeat;background-size:cover;margin-left:auto;margin-right:auto;border-radius:10px;height:100px;width:100px">
+						
+					</div>
+					<br>
+					Wakala Withdrawal
+				</div>
+			</ion-col>
+			
+		   </ion-row>
+		   
+		</div>
+	</div>
+	<ion-fab top right edge>
+		<button ion-fab mini color="nmborange"><ion-icon name="arrow-dropleft"></ion-icon></button>
+		<ion-fab-list side="left">
+		  
+		  <button ion-fab color="facebook" (click)="openPage('LocationtabsPage')"><ion-icon name="locate"></ion-icon></button>
+		  <button ion-fab color="youtube" (click)="openPage('ContactsPage')"><ion-icon name="call"></ion-icon></button>
+ 		</ion-fab-list>
+    </ion-fab>
+</ion-content>

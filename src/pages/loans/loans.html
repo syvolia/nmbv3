@@ -1,0 +1,99 @@
+<!--
+  Generated template for the LoansPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!--
+  Generated template for the AirtimePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+
+  <ion-navbar hideBackButton color="nmbgrey2">
+    <ion-buttons left>
+		<button ion-button navPop icon-only>
+			<ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+			<img src="assets/dcb_logo_trans.jpg" style="height:30px;width:auto;border-radius:50%;"/>
+		</button>
+	</ion-buttons>
+    <ion-title>Secured Loans</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content class="back-view">
+    <div  style="height:100%;width:100%">
+		<div  style="color:#0257A7;font-size:12px;width:100%">
+		   <ion-row class="advert-row">
+         <ion-col style="text-align:center;" padding (click)="openPageFab('LoanstatusPage')">
+    
+			    <div  class="myspinner"  style="background-color:#ffffff;border-color:#c400ff;border-width:1px;border-radius:50%;height:80px;width:80px;border-style:solid; display:flex;">
+				     <img src="assets/economy.png" style="height:40px;width:40px;margin-left:auto;margin-right:auto;margin-top: 20px;border-radius:50px;" />
+                </div>
+			</div>
+			<p>
+		    Loan Status
+			</p>
+		</ion-col >
+
+
+		
+
+			<ion-col style="text-align:center;" padding (click)="openPageFab('LoanenqPage')">
+				<div class="raisedlay" style="margin-left:auto;margin-right:auto;background-color:#607D8B;border-radius:5px;height:60px;padding:5px;width:60px;">
+			    <div class="myspinner" style="background-color:#ffffff;border-color:#BDBDBD;border-width:2px;border-radius:50%;height:50px;width:50px;border-style:solid; display:flex;align-items:center">
+				     <img src="assets/transfer.png" style="margin-left:auto;margin-right:auto;" />
+                </div>
+			</div>
+			<p>
+		    Loan Enquries
+			</p>
+			</ion-col>
+
+		   </ion-row>
+		   <ion-row class="advert-row">
+	
+      <ion-col style="text-align:center;" padding (click)="openPageFab('LoanapplyPage')">
+				<div class="raisedlay" style="margin-left:auto;margin-right:auto;background-color:#607D8B;border-radius:5px;height:60px;padding:5px;width:60px;">
+			    <div  class="myspinner" style="background-color:#ffffff;border-color:#BDBDBD;border-width:2px;border-radius:50%;height:50px;width:50px;border-style:solid; display:flex;align-items:center">
+				     <img src="assets/airtime_2.png" style="margin-left:auto;margin-right:auto;" />
+                </div>
+			</div>
+			<p>
+		Loan Appilication    
+			</p>
+			</ion-col>
+
+
+       
+         <ion-col style="text-align:center;" padding (click)="openPageFab('LoanrepayPage')">
+           <div class="raisedlay" style="margin-left:auto;margin-right:auto;background-color:#607D8B;border-radius:5px;height:60px;padding:5px;width:60px;">
+			    <div  class="myspinner"  style="background-color:#ffffff;border-color:#BDBDBD;border-width:2px;border-radius:50%;height:50px;width:50px;border-style:solid; display:flex;align-items:center">
+				     <img src="assets/economy.png" style="margin-left:auto;margin-right:auto;" />
+                </div>
+			</div>
+			<p>
+		    Loan Repayment
+			</p>
+         </ion-col>
+
+		   </ion-row>
+		   <ion-row padding>
+
+		
+		   </ion-row>
+		</div>
+	</div>
+	<ion-fab top right edge>
+		<button ion-fab mini color="nmborange"><ion-icon name="arrow-dropleft"></ion-icon></button>
+		<ion-fab-list side="left">
+
+		  <button ion-fab color="facebook" (click)="openPageFab('LocationtabsPage')"><ion-icon name="locate"></ion-icon></button>
+		  <button ion-fab color="youtube" (click)="openPageFab('ContactsPage')"><ion-icon name="call"></ion-icon></button>
+		</ion-fab-list>
+    </ion-fab>
+</ion-content>
+
